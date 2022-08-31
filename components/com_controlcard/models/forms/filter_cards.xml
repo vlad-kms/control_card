@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+
+        <field
+                name="search"
+                type="text"
+                label="COM_CONTROLCARD_FILTER_SEARCH_LABEL"
+                description="COM_CONTROLCARD_FILTER_SEARCH_DESC"
+                hint="JSEARCH_FILTER"
+                onchange="this.form.submit();"
+        />
+
+        <field
+                name="performed"
+                type="list"
+                label="COM_CONTROLCARD_FILTER_SELECT_PERFORMED"
+                description="COM_CONTROLCARD_FILTER_SELECT_PERFORMED_DESC"
+                onchange="this.form.submit();"
+        >
+            <option value="">COM_CONTROLCARD_FILTER_SELECT_PERFORMED</option>
+            <option value="1">COM_CONTROLCARD_CARD_LABEL_PERFORMED_NOT</option>
+            <option value="2">COM_CONTROLCARD_CARD_LABEL_PERFORMED</option>
+        </field>
+
+        <field
+                name="performed_type"
+                type="performedtype"
+                label="COM_CONTROLCARD_CARD_LABEL_PERFORMED_TYPE"
+                onchange="this.form.submit();"
+        >
+            <option value="">COM_CONTROLCARD_CARD_LABEL_PERFORMED_TYPE</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="COM_CONTACT_LIST_FULL_ORDERING"
+                description="COM_CONTROLCARD_CARDS_FULL_ORDERING_DESC"
+                onchange="this.form.submit();"
+        >
+            <!-- default="a.performed_date DESC" -->
+            <option value="">COM_CONTROLCARD_SORT_BY</option>
+            <option value="a.performed_date DESC">COM_CONTROLCARD_SORT_PERFORMED_DATE_DESC</option>
+            <option value="a.performed_date ASC">COM_CONTROLCARD_SORT_PERFORMED_DATE_ASC</option>
+            <option value="a.num_controlcard DESC">COM_CONTROLCARD_SORT_NUM_CONTROLCARD_DATE_DESC</option>
+            <option value="a.num_controlcard ASC">COM_CONTROLCARD_SORT_NUM_CONTROLCARD_DATE_ASC</option>
+            <option value="a.id DESC">COM_CONTROLCARD_SORT_ID_DESC</option>
+            <option value="a.id ASC">COM_CONTROLCARD_SORT_ID_ASC</option>
+        </field>
+    </fields>
+</form>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="person" label="COM_CONTROLCARD_PERSON_DEFAULT_LABEL">
+        <field
+                name="fio"
+                type="text"
+                label="COM_CONTROLCARD_PERSON_FIELD_FIO_TITLE"
+                class="inputbox"
+                id="fio"
+                size="50"
+                default=""
+                required="true"
+                maxlength="255"
+        />
+        <field
+                name="person_post"
+                type="text"
+                label="COM_CONTROLCARD_PERSON_FIELD_PERSON_POST_TITLE"
+                class="inputbox"
+                id="person_post"
+                size="50"
+                default=""
+                required="0"
+                maxlength="255"
+        />
+        <field
+                name="dismiss"
+                id="dismiss"
+                type="checkbox"
+                label="COM_CONTROLCARD_PERSON_FIELD_DISMISS_TITLE"
+                value="1"
+        />
+        <field
+                name="user_id"
+                id="user_id"
+                label="COM_CONTROLCARD_PERSON_FIELD_USERID_TITLE"
+                type="sql"
+                query="SELECT `a`.`id`, `a`.`username`, `a`.`name`, CONCAT(`a`.`name` , ' (' , `a`.`username`, ')') AS `name1` FROM `#__users` AS `a` WHERE `a`.`block`=0 AND
+                                    (a.id NOT IN (SELECT  user_id FROM `#__controlcard_persons` WHERE user_id is not null))"
+                key_field="id"
+                value_field="name1"
+                description1="COM_CONTROLCARD_PERSON_FIELD_USERID_DESC"
+            >
+            <option value='-1' >JNEW</option>
+            <option value='' >COM_CONTROLCARD_PERSON_FIELD_USERID_EMPTY</option>
+        </field>
+        <field
+                name="email"
+                type="email"
+                label="JGLOBAL_EMAIL"
+                required="false"
+                size="50"
+                default=""
+                validate="email"
+        />
+
+        <field
+                name="spacer"
+                type="spacer"
+                label="COM_CONTROLCARD_PERSON_REQUIRED"
+                class="text"
+        />
+        <field
+                name="id"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                class="readonly"
+                id="id"
+        />
+        <!--
+        <field
+                name="user_id"
+                id="user_id"
+                type="userstate"
+                label="COM_CONTROLCARD_PERSON_FIELD_USERID_TITLE"
+        />
+        -->
+
+    </fieldset>
+</form>
+
+<!--
+                query="SELECT `a`.`id`, `a`.`username`, `a`.`name`, CONCAT(`a`.`username` , ' (' , `a`.`name`, ')') AS `name1` FROM `#__users` AS `a` WHERE `a`.`block`=0 AND
+                                    (a.id NOT IN (SELECT  user_id FROM `#__controlcard_persons` WHERE user_id is not null))"
+
+                validDomains="com_users.domains"
+-->

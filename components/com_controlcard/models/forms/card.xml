@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="card" label="COM_CONTROLCARD_CARD_DEFAULT_LABEL">
+        <field
+            name="num_controlcard"
+            id="num_controlcard"
+            type="text"
+            size="52"
+            required="1"
+            label="COM_CONTROLCARD_CARD_LABEL_NUMCARD"
+            default=""
+            class="inputbox text-right1"
+            autofocus="true"
+        />
+        <field
+                name="person_id"
+                id="person_id"
+                type="sql"
+                query="SELECT `a`.`id`, `a`.`fio`, CONCAT_WS(' ', a.fio, a.person_post) AS `fullname` FROM `#__controlcard_persons` AS `a` WHERE `a`.`dismiss`=0"
+                key_field="id"
+                value_field="fullname"
+                required="1"
+                label="COM_CONTROLCARD_CARD_LABEL_PERSON_ID"
+                class="hasTooltip width100percent"
+                description1="COM_CONTROLCARD_CARD_LABEL_PERSON_ID_DESC"
+        >
+        </field>
+        <field
+                name="spacer1"
+                type="spacer"
+                hr="true"
+                class="spacer"
+        />
+        <field
+                name="performed_date"
+                id="performed_date"
+                type="calendar"
+                label="COM_CONTROLCARD_CARD_LABEL_PERFORMED_DATE"
+                size="22"
+                translateformat="true"
+        />
+        <field
+                name="performed_type"
+                id="performed_type"
+                type="performedtype"
+                label="COM_CONTROLCARD_CARD_LABEL_PERFORMED_TYPE"
+                default="1"
+        >
+        </field>
+        <field
+                name="performed"
+                id="performed"
+                type="checkbox"
+                label="COM_CONTROLCARD_CARD_LABEL_PERFORMED"
+                value="1"
+        />
+        <field
+                name="performed_ext_int"
+                id="performed_ext_int"
+                type="text"
+                size="52"
+                required="1"
+                label="COM_CONTROLCARD_CARD_LABEL_PERFORMED_EXT_INT"
+                default="1"
+                class="inputbox text-right1"
+                showon="performed_type:5[OR]performed_type:8"
+        />
+
+        <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+                class="spacer"
+        />
+        <field
+                name="num_document_int"
+                id="num_document_int"
+                type="text"
+                size="50"
+                required="0"
+                label="COM_CONTROLCARD_CARD_LABEL_NUM_DOCUMENT_INT"
+                default=""
+                maxlength="50"
+                class="inputbox text-right1"
+        />
+        <field
+                name="date_document_int"
+                id="date_document_int"
+                type="calendar"
+                label="COM_CONTROLCARD_CARD_LABEL_DATE_DOCUMENT_INT"
+                size="22"
+                translateformat="true"
+        />
+
+        <field
+                name="num_document"
+                id="num_document"
+                type="text"
+                size="50"
+                required="0"
+                label="COM_CONTROLCARD_CARD_LABEL_NUM_DOCUMENT"
+                default=""
+                maxlength="50"
+                class="inputbox text-right1"
+        />
+        <field
+                name="date_document"
+                id="date_document"
+                type="calendar"
+                label="COM_CONTROLCARD_CARD_LABEL_DATE_DOCUMENT"
+                size="22"
+                translateformat="true"
+        />
+        <field
+                name="reason_sel"
+                id="reason_sel"
+                type="sql"
+                query="SELECT `a`.`id`, `a`.`name` FROM `#__controlcard_reasons` AS `a`"
+                key_field="id"
+                value_field="name"
+                required="0"
+                label="COM_CONTROLCARD_CARD_LABEL_REASON"
+                default=""
+                maxlength="512"
+                class="inputbox width100percent"
+        >
+            <option value="">COM_CONTROLCARD_CARD_SELECT_REASON</option>
+        </field>
+        <field
+                name="reason"
+                id="reason"
+                type="text"
+                required="0"
+                label="COM_CONTROLCARD_CARD_LABEL_REASON"
+                default=""
+                maxlength="512"
+                class="inputbox"
+        />
+        <field
+                name="report"
+                id="report"
+                type="text"
+                size="52"
+                required="0"
+                label="COM_CONTROLCARD_CARD_LABEL_REPORT"
+                default=""
+                maxlength="255"
+                class="inputbox"
+        />
+
+        <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+                label="COM_CONTROLCARD_PERSON_REQUIRED"
+                class="text"
+        />
+        <field
+                name="note"
+                id="note"
+                type="textarea"
+                cols="40"
+                rows="8"
+                maxlength="512"
+                required="1"
+                label="COM_CONTROLCARD_CARD_LABEL_NOTE"
+                default=""
+                class="inputbox width100percent"
+                spellcheck="true"
+        />
+        <field
+                name="note_big"
+                id="note_big"
+                type="textarea"
+                cols="40"
+                rows="8"
+                maxlength="1000"
+                label="COM_CONTROLCARD_CARD_LABEL_NOTE_BIG"
+                default=""
+                class="inputbox width100percent"
+                spellcheck="true"
+        />
+        <!-- hidden fields -->
+        <field
+                name="performed_date_next"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                class=""
+                id="performed_date_next"
+        />
+        <field
+                name="day_to_performed"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                class=""
+                id="day_to_performed"
+        />
+
+        <field
+                name="id"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                class="readonly"
+                id="id"
+        />
+        <field
+                name="person_id_create"
+                type="hidden"
+                label="COM_CONTROLCARD_CARD_LABEL_PERSON_ID_CREATE"
+                class="readonly"
+                required="0"
+                id="person_id_create"
+        />
+        <!--
+        <field
+                name="user_id"
+                id="user_id"
+                type="userstate"
+                label="COM_CONTROLCARD_PERSON_FIELD_USERID_TITLE"
+        />
+
+                format="%d-%m-%Y"
+                showtime="true"
+                showon="performed_type:5[OR]performed_type:4"
+
+        -->
+
+    </fieldset>
+</form>

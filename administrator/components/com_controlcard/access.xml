@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_controlcard">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.options" title="JACTION_OPTIONS" description="JACTION_OPTIONS_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="JACTION_EDITVALUE_COMPONENT_DESC" />
+
+		<action name="core.card.access" title="COM_CONTROLCARD_PERMISSIONS_CARDS" description="COM_CONTROLCARD_PERMISSIONS_CARDS_DESC" />
+		<action name="core.card.display" title="COM_CONTROLCARD_PERMISSIONS_CARDS_DISPLAY" description="COM_CONTROLCARD_PERMISSIONS_CARDS_DISPLAY_DESC" />
+		<action name="core.card.display.own" title="COM_CONTROLCARD_PERMISSIONS_CARDS_DISPLAY_OWNER" description="COM_CONTROLCARD_PERMISSIONS_CARDS_DISPLAY_DESC_OWNER" />
+		<action name="core.card.edit" title="COM_CONTROLCARD_PERMISSIONS_CARDS_EDIT" description="COM_CONTROLCARD_PERMISSIONS_CARDS_EDIT_DESC" />
+		<action name="core.card.edit.own" title="COM_CONTROLCARD_PERMISSIONS_CARDS_EDIT_OWNER" description="COM_CONTROLCARD_PERMISSIONS_CARDS_EDIT_OWNER_DESC" />
+		<action name="core.card.delete" title="COM_CONTROLCARD_PERMISSIONS_CARDS_DELETE" description="COM_CONTROLCARD_PERMISSIONS_CARDS_DELETE_DESC" />
+		<action name="core.card.delete.own" title="COM_CONTROLCARD_PERMISSIONS_CARDS_DELETE_OWNER" description="COM_CONTROLCARD_PERMISSIONS_CARDS_DELETE_DESC_OWNER" />
+
+		<action name="core.persons.access" title="COM_CONTROLCARD_PERMISSIONS_PERSONS" description="COM_CONTROLCARD_PERMISSIONS_PERSONS_DESC" />
+		<action name="core.persons.display" title="COM_CONTROLCARD_PERMISSIONS_PERSONS_DISPLAY" description="COM_CONTROLCARD_PERMISSIONS_PERSONS_DISPLAY_DESC" />
+		<action name="core.persons.edit" title="COM_CONTROLCARD_PERMISSIONS_PERSONS_EDIT" description="COM_CONTROLCARD_PERMISSIONS_PERSONS_EDIT_DESC" />
+		<action name="core.persons.delete" title="COM_CONTROLCARD_PERMISSIONS_PERSONS_DELETE" description="COM_CONTROLCARD_PERMISSIONS_PERSONS_DELETE_DESC" />
+
+		<action name="core.reasons.access" title="COM_CONTROLCARD_PERMISSIONS_REASONS" description="COM_CONTROLCARD_PERMISSIONS_REASONS_DESC" />
+		<action name="core.reasons.display" title="COM_CONTROLCARD_PERMISSIONS_REASONS_DISPLAY" description="COM_CONTROLCARD_PERMISSIONS_REASONS_DISPLAY_DESC" />
+		<action name="core.reasons.edit" title="COM_CONTROLCARD_PERMISSIONS_REASONS_EDIT" description="COM_CONTROLCARD_PERMISSIONS_REASONS_EDIT_DESC" />
+		<action name="core.reasons.delete" title="COM_CONTROLCARD_PERMISSIONS_REASONS_DELETE" description="COM_CONTROLCARD_PERMISSIONS_REASONS_DELETE_DESC" />
+
+		<action name="core.user.add" title="COM_CONTROLCARD_PERMISSION_USER_ADD" description="COM_CONTROLCARD_PERMISSION_USER_ADD_DESC" />
+		<action name="core.user.edit" title="COM_CONTROLCARD_PERMISSION_USER_EDIT" description="COM_CONTROLCARD_PERMISSION_USER_EDIT_DESC" />
+		<action name="core.user.delete" title="COM_CONTROLCARD_PERMISSION_USER_DELETE" description="COM_CONTROLCARD_PERMISSION_USER_DELETE_DESC" />
+	</section>
+</access>
