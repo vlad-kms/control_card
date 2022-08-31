@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CONTROLCARD_PERSONS">
+		<message>
+			<![CDATA[COM_CONTROLCARD_PERSONS_DESC_MENU]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset
+				name="list"
+				label="COM_CONTROLCARD_OPTION_LIST"
+				description="COM_CONTROLCARD_OPTION_LIST_DESC"
+		>
+
+			<field
+					name="show_pagination"
+					type="list"
+					label="JGLOBAL_PAGINATION_LABEL"
+					description="JGLOBAL_PAGINATION_DESC"
+					default="2"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+			<field
+					name="show_pagination_top"
+					type="list"
+					label="COM_CONTROLCARD_PAGINATION_TOP_LABEL"
+					description="COM_CONTROLCARD_PAGINATION_TOP_DESC"
+					default="0"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field
+					name="show_pagination_results"
+					type="radio"
+					label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+					description="JGLOBAL_PAGINATION_RESULTS_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					showon="show_pagination:1,2"
+			>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field
+					name="show_pagination_limit"
+					type="radio"
+					label="JGLOBAL_DISPLAY_SELECT_LABEL"
+					description="JGLOBAL_DISPLAY_SELECT_DESC"
+					default="0"
+					class="btn-group btn-group-yesno"
+			>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<!--
+			<field
+					name="pagination_limit"
+					type="list"
+					label="JGLOBAL_DISPLAY_SELECT_LABEL"
+					description="JGLOBAL_DISPLAY_SELECT_DESC"
+					default="20"
+					class="btn-group btn-group-yesno"
+			>
+				<option value="5"></option>
+				<option value="10"></option>
+				<option value="15"></option>
+				<option value="20"></option>
+				<option value="25"></option>
+				<option value="30"></option>
+				<option value="50">J50</option>
+				<option value="100">J100</option>
+				<option value="0">JALL</option>
+				<option value="-1">COM_CONTROLCARD_OPTION_LIST_GLOBALLIMIT</option>
+			</field>
+			-->
+
+		</fieldset>
+
+		<fieldset name="advanced" label="JGLOBAL_LIST_LAYOUT_OPTIONS">
+		</fieldset>
+	</fields>
+</metadata>

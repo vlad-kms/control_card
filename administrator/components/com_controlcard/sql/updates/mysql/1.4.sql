@@ -1,0 +1,1 @@
+ALTER TABLE `#__controlcard_persons` ADD COLUMN `email` VARCHAR(100) DEFAULT '' COMMENT 'EMail сотрудника (отв. лица)';

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <fieldset
+        name="controlcard"
+        label="COM_CONTROLCARD_CARD"
+        description="COM_CONTROLCARD_CARD_DESC"
+    >
+        <field
+            type="spacer"
+            name="spacer-common"
+            label="COM_CONTROLCARD_CONFIG_COMMON"
+            description="COM_CONTROLCARD_CONFIG_COMMON_DESC"
+        />
+        <!--
+        <field
+                type="spacer"
+                name="spacer-avv"
+                hr="true"
+                class="spacer-avv"
+        />
+        -->
+        <field
+            name="show_cards_onlyowner"
+            type="radio"
+            label="COM_CONTROLCARD_OPTION_SHOW_CARDS_ONLY_OWNER"
+            description="COM_CONTROLCARD_OPTION_SHOW_CARDS_ONLY_OWNER_DESC"
+            default="1"
+            class="btn-group btn-group-yesno"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                name="spacer-list"
+                label="COM_CONTROLCARD_CONFIG_LIST"
+                description="COM_CONTROLCARD_CONFIG_LIST_DESC"
+        />
+        <field
+                name="show_login_list"
+                type="radio"
+                label="COM_CONTROLCARD_CONFIG_LIST_FIELD_LOGIN_SHOW"
+                description="COM_CONTROLCARD_CONFIG_LIST_FIELD_LOGIN_SHOW_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="show_email_list"
+                type="radio"
+                label="COM_CONTROLCARD_CONFIG_LIST_FIELD_EMAIL_SHOW"
+                description="COM_CONTROLCARD_CONFIG_LIST_FIELD_EMAIL_SHOW_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="show_dismiss_list"
+                type="radio"
+                label="COM_CONTROLCARD_CONFIG_LIST_FIELD_DISMISS_SHOW"
+                description="COM_CONTROLCARD_CONFIG_LIST_FIELD_DISMISS_SHOW_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <fields name="performed_list" label="Qwerty">
+            <field
+                    name="show"
+                    type="radio"
+                    label="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_SHOW"
+                    description="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_SHOW_DESC"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                    name="allow_change"
+                    type="radio"
+                    label="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_ALLOW_CHANGE"
+                    description="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_ALLOW_CHANGE_DESC"
+                    default="1"
+                    showon="performed_list.show:1"
+                    class="btn-group btn-group-yesno"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fields>
+
+        <field
+            name="idornum"
+            type="list"
+            label="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_ID_AS_NUM"
+            description="COM_CONTROLCARD_CONFIG_LIST_FIELD_PERFORMED_ID_AS_NUM_DESC"
+            default="1"
+            class="btn-group btn-group-yesno"
+        >
+            <option value="0">COM_CONTROLCARD_FIELD_LABEL_ID</option>
+            <option value="1">COM_CONTROLCARD_FIELD_LABEL_NUM_CONTROLCARD</option>
+        </field>
+        <field
+                type="spacer"
+                name="spacer-print"
+                label="COM_CONTROLCARD_CONFIG_COMMON_PRINT"
+                description="COM_CONTROLCARD_CONFIG_COMMON_PRINT_DESC"
+        />
+        <field
+                name="printpdf_date"
+                type="radio"
+                label="COM_CONTROLCARD_CONFIG_PRINT_PDF_DATE"
+                description="COM_CONTROLCARD_CONFIG_PRINT_PDF_DATE_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+    </fieldset>
+<!--
+    <fieldset
+            name="colors"
+            label="COM_CONTROLCARD_CONFIG_COLORS"
+            description="COM_CONTROLCARD_CONFIG_COLORS_DESC"
+    >
+        <field
+                type="spacer"
+                name="spacer-colors-cards-txt"
+                label="COM_CONTROLCARD_CONFIG_COLORS_CARDS_LABEL"
+                description="COM_CONTROLCARD_CONFIG_COLORS_CARDS_LABEL_DESC"
+        />
+
+    </fieldset>
+-->
+    <fieldset
+            name="persons"
+            label="COM_CONTROLCARD_LIST_PERSONS"
+            description="COM_CONTROLCARD_LIST_PERSONS_DESC"
+    >
+        <field
+                name="new_usertype"
+                type="usergrouplist"
+                label="COM_CONTROLSCARD_CONFIG_FIELD_NEW_USER_TYPE_LABEL"
+                description="COM_CONTROLSCARD_CONFIG_FIELD_NEW_USER_TYPE_DESC"
+                default="2"
+                checksuperusergroup="1"
+        />
+
+    </fieldset>
+
+    <fieldset
+            name="list"
+            label="COM_CONTROLCARD_OPTION_LIST"
+            description="COM_CONTROLCARD_OPTION_LIST_DESC"
+    >
+
+        <field
+                name="show_pagination"
+                type="list"
+                label="JGLOBAL_PAGINATION_LABEL"
+                description="JGLOBAL_PAGINATION_DESC"
+                default="2"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+            <option value="2">JGLOBAL_AUTO</option>
+        </field>
+
+        <field
+                name="show_pagination_top"
+                type="list"
+                label="COM_CONTROLCARD_PAGINATION_TOP_LABEL"
+                description="COM_CONTROLCARD_PAGINATION_TOP_DESC"
+                default="0"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+
+        <field
+                name="show_pagination_results"
+                type="radio"
+                label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                description="JGLOBAL_PAGINATION_RESULTS_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+                showon="show_pagination:1,2"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+
+        <field
+                name="show_pagination_limit"
+                type="radio"
+                label="JGLOBAL_DISPLAY_SELECT_LABEL"
+                description="JGLOBAL_DISPLAY_SELECT_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+
+        <field
+                name="pagination_limit"
+                type="list"
+                label="JGLOBAL_DISPLAY_SELECT_LABEL"
+                description="JGLOBAL_DISPLAY_SELECT_DESC"
+                default="20"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="5"></option>
+            <option value="10"></option>
+            <option value="15"></option>
+            <option value="20"></option>
+            <option value="25"></option>
+            <option value="30"></option>
+            <option value="50">J50</option>
+            <option value="100">J100</option>
+            <option value="0">JALL</option>
+            <option value="-1">COM_CONTROLCARD_OPTION_LIST_GLOBALLIMIT</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="notify"
+            label="COM_CONTORLCARD_CONFIG_NOTIFY"
+            description="COM_CONTORLCARD_CONFIG_NOTIFY_DESC"
+    >
+        <field
+                name="notification_use"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_NOTIFY_USE"
+                description="COM_CONTORLCARD_CONFIG_NOTIFY_USE_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="notification_days"
+                type="text"
+                size="50"
+                maxsize="150"
+                label="COM_CONTORLCARD_CONFIG_NOTIFY_DAYS"
+                description="COM_CONTORLCARD_CONFIG_NOTIFY_DAYS_DESC"
+                default="1,3,5,10"
+                class="btn-group btn-group-yesno"
+        />
+        <field
+                name="notification_sendpdf"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_NOTIFY_SENDPDF"
+                description="COM_CONTORLCARD_CONFIG_NOTIFY_SENDPDF_DESC"
+                default="1"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="notification_enablelog"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_NOTIFY_ENABLELOG"
+                description="COM_CONTORLCARD_CONFIG_NOTIFY_ENABLELOG_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset name="debug" label="COM_CONTROLCARD_DEBUG_LABEL" description="COM_CONTROLCARD_DEBUG_LABEL_DESC">
+        <field
+                name="log_enable"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_DEBUG_LOG"
+                description="COM_CONTORLCARD_CONFIG_DEBUG_LOG_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="debug_enable"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_DEBUG_ENABLE"
+                description="COM_CONTORLCARD_CONFIG_DEBUG_ENABLE_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="extfields_use"
+                type="radio"
+                label="COM_CONTORLCARD_CONFIG_DEBUG_EXTFIELDS_USE"
+                description="COM_CONTORLCARD_CONFIG_DEBUG_EXTFIELDS_USE_DESC"
+                default="0"
+                class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                filter="rules"
+                component="com_controlcard"
+                section="component"
+        >
+        </field>
+    </fieldset>
+</config>
+<!--
+                default='{"core.card.access":{"2":1,"6":1},"core.card.display.own":{"2":1},"core.persons.access":{"2":1,"6":1},"core.persons.display":{"2":1,"6":1},"core.reasons.access":{"2":1,"6":1},"core.reasons.display":{"2":1,"6":1},"core.card.display":{"6":1},"core.card.edit":{"6":1},"core.user.add":{"6":1},"core.user.edit":{"6":1},"core.user.delete":{"6":1},"core.reasons.edit":{"6":1},"core.reasons.delete":{"6":1},"core.persons.edit":{"6":1},"core.card.delete":{"6":1}}'
+-->

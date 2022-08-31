@@ -1,0 +1,1 @@
+alter table `#__controlcard_cards` MODIFY `reason` varchar(512) NOT NULL default '';

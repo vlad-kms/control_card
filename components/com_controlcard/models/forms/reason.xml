@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="reason" label="COM_CONTROLCARD_REASON_DEFAULT_LABEL">
+        <field
+                id="name"
+                name="name"
+                type="textarea"
+                cols="80"
+                rows="8"
+                maxlength="512"
+                label="COM_CONTROLCARD_REASON_FIELD_NAME_TITLE"
+                class="inputbox"
+                size="50"
+                default=""
+                required="true"
+        />
+        <field
+                name="spacer"
+                type="spacer"
+                label="COM_CONTROLCARD_PERSON_REQUIRED"
+                class="text"
+        />
+        <field
+                name="id"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                class="readonly"
+                id="id"
+        />
+    </fieldset>
+</form>
