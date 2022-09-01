@@ -2,7 +2,10 @@
 /*
 */
 
-define('DS', DIRECTORY_SEPARATOR);
+if ( ! defined('DS'))
+{
+	define('DS', DIRECTORY_SEPARATOR);
+}
 
 jimport('joomla.log.logger.formattedtext');
 
